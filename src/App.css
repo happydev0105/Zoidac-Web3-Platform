@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+  .card{
+    @apply absolute top-0 right-0 bottom-0 left-0 m-auto w-[350px] h-[200px]
+    cursor-pointer z-0 opacity-0 bg-transparent border-2 rounded-lg p-3 border-red-400
+  }
+  .card--active{
+    @apply opacity-100 z-[99] border-0 p-5
+  }
+  .imageCard{
+    @apply absolute top-0 right-0 bottom-0 left-0 m-auto w-[250px] h-[390px]
+    border-4 border-[#B51F98] rounded-md
+  }
+  .imageCard--active{
+    @apply opacity-100 z-[99] border-[#B51F98] rounded-md
+  }
+  /* .imageCard--left{
+    @apply 
+  } */
+}
+
+.card {
+  transition: 500ms; 
+}
+
+.card--active {
+  transform: scale(1);
+  background: linear-gradient(116.01deg, #B51F98 -6.29%, #80150E 50.46%, #932119 98.29%);
+}
+
+.card--left {
+  transform: translateX(-80%) scale(0.8);
+  transition: 500ms;
+  opacity: 0.2;
+}
+.imageCard--active{
+  transform: scale(1);
+}
+.imageCard--left{
+  transform: translateX(-60%) scale(0.8) rotate(-15deg);
+  transition: 500ms;
+  /* transform: rotate(-15deg); */
+}
+
+.imageCard--right {
+  transform: translateX(60%) scale(0.8) rotate(15deg);
+  transition: 500ms;
+  /* transform: rotate(15deg); */
+}
+
+.card--right {
+  transform: translateX(80%) scale(0.8);
+  transition: 500ms;
+  opacity: 0.2;
+}
